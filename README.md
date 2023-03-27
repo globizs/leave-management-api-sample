@@ -119,14 +119,14 @@ IV. GET leave-types:
 V. POST apply-leave:
 	Authorization Bearer Token
 
-	Request:
+	Request (form-data_:
 
-		{
-			"from": "2023-03-10",
-			"to": "2023-03-10",
-			"leave_type_id": 3,
-			"reason": "I am sick"
-		}
+		"from": "2023-03-10"
+		"to": "2023-03-10"
+		"half_day": false
+		"day_section": NULL
+		"leave_type_id": 3
+		"reason": "I am sick"
 
 	Response:
 
