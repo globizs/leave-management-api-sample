@@ -119,7 +119,7 @@ IV. GET leave-types:
 V. POST apply-leave:
 	Authorization Bearer Token
 
-	Request (form-data_:
+	Request (form-data): (day_section: 1 for morning half, 2 for afternoon)
 
 		"from": "2023-03-10"
 		"to": "2023-03-10"
