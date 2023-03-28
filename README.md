@@ -298,7 +298,6 @@ VII. View leave details
 
 VIII. Fetch pending leaves assigned to me for approval (HOD/HR/Director)
 	GET leaves/pending?_page=1&limit=10
-
 	Authorization Bearer Token
 
 	Response:
@@ -329,4 +328,15 @@ VIII. Fetch pending leaves assigned to me for approval (HOD/HR/Director)
 				"action_text": null,
 				"show_alert": true
 			}]
+		}
+
+IX. Approve leave:
+	POST leaves/210/approve
+	Authorization Bearer Token
+
+	Response:
+
+		{
+			"status": 1,
+			"remark": null
 		}
