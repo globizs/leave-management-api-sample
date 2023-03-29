@@ -1,7 +1,7 @@
 I. OTP based Login API:
 	1. POST auth/send-otp
 
-	Request:
+Request:
 
 		{
 			"username": "sushil@globizs.com"
@@ -9,14 +9,14 @@ I. OTP based Login API:
 
 	2. POST auth/verify-otp
 
-	Request:
+Request:
 
 		{
 			"username": "sushil@globizs.com",
 			"otp": "123456"
 		}
 
-	Response:
+Response:
 
 		{
 			"status": true,
@@ -29,7 +29,7 @@ I. OTP based Login API:
 II. GET profile:
 	Authorization Bearer Token
 	
-	Response:
+Response:
 
 		{
 			"status": true,
@@ -46,7 +46,7 @@ III. My recent leaves:
 	GET recent-leaves
 	Authorization Bearer Token
 
-	Response:
+Response:
 
 		{
 			"status": true,
@@ -73,7 +73,7 @@ III. My recent leaves:
 IV. GET leave-types:
 	Authorization Bearer Token
 
-	Response:
+Response:
 
 		{
 			"status": true,
@@ -128,7 +128,7 @@ V. POST apply-leave:
 		"leave_type_id": 3
 		"reason": "I am sick"
 
-	Response:
+Response:
 
 		{
 			"status": true,
@@ -139,7 +139,7 @@ VI. Fetch my leaves
 	GET leaves?_page=1
 	Authorization Bearer Token
 
-	Response:
+Response:
 
 		{
 			"status": true,
@@ -167,7 +167,7 @@ VI. Fetch all leaves
 	GET leaves/all?_page=1
 	Authorization Bearer Token
 
-	Response:
+Response:
 
 		{
 			"status": true,
@@ -266,7 +266,7 @@ VII. View leave details
 	GET leaves/210
 	Authorization Bearer Token
 
-	Response:
+Response:
 
 		{
 			"status": true,
@@ -300,7 +300,7 @@ VIII. Fetch pending leaves assigned to me for approval (HOD/HR/Director)
 	GET leaves/pending?_page=1&limit=10
 	Authorization Bearer Token
 
-	Response:
+Response:
 
 		{
 			"status": true,
@@ -331,12 +331,19 @@ VIII. Fetch pending leaves assigned to me for approval (HOD/HR/Director)
 		}
 
 IX. Approve leave:
-	POST leaves/210/approve
-	Authorization Bearer Token
+POST leaves/210/approve
+Authorization Bearer Token
 
-	Response:
+Request:
 
 		{
 			"status": 1,
 			"remark": null
+		}
+
+Response:
+
+		{
+			"status": true,
+			"message": "Leave status updated"
 		}
